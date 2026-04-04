@@ -4,7 +4,7 @@ The up-to-date version of FennoTraits dataset.
 
 # FennoTraits Data Dictionary
 
-This document describes the variables in the three data files accompanying the FennoTraits dataset.
+Here we describe the variables in the three data files accompanying the FennoTraits dataset.
 
 ---
 
@@ -26,8 +26,8 @@ Community-level vegetation height and cover data. Contains 42,503 records across
 | `Lon` | numeric | Longitude of the plot in decimal degrees (WGS84) |  —  |
 | `country` | character | Country where the observation was made | FIN = Finland; NOR = Norway; SWE = Sweden |
 | `taxon` | character | Taxon name as used in the dataset (may be subspecies, species, genus, or family) | — |
-| `cvr` | numeric | Percentage cover of the taxon in the plot | % (0.25 – 100) |
-| `median_height` | numeric | Median vegetation height of the taxon in the plot. | cm |
+| `cvr` | numeric | Percentage cover of the taxon in the plot | % |
+| `median_height` | numeric | Median vegetation height of the taxon in the plot | cm |
 | `max_height` | numeric | Maximum vegetation height of the taxon in the plot | cm |
 
 ---
@@ -49,7 +49,7 @@ Individual leaf-level functional trait measurements. Contains 22,414 records acr
 | `country` | character | Country where the observation was made | FIN = Finland; NOR = Norway; SWE = Sweden |
 | `taxon` | character | Taxon name as used in the dataset (may be subspecies, species, genus, or family) | — |
 | `reproduction` | numeric | Sexual reproductive effort index of the species at site at year of sampling | — |
-| `leaf_area` | numeric | One-sided leaf area. 10,580 missing values | cm² |
+| `leaf_area` | numeric | One-sided leaf area | cm² |
 | `SLA` | numeric | Specific leaf area (leaf area per unit dry mass) | mm² mg⁻¹ |
 | `LDMC` | numeric | Leaf dry matter content (dry mass per unit fresh mass) | g g⁻¹ |
 | `w_weight` | numeric | Fresh (wet) mass of a leaf | g |
