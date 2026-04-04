@@ -5,7 +5,6 @@ The up-to-date version of FennoTraits dataset.
 # FennoTraits Data Dictionary
 
 This document describes the variables in the three data files accompanying the FennoTraits dataset.
-Please review and correct any descriptions marked with *[VERIFY]*.
 
 ---
 
