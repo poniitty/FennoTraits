@@ -49,6 +49,8 @@ Individual leaf-level functional trait measurements. Contains 22,414 records acr
 | `country` | character | Country where the observation was made | FIN = Finland; NOR = Norway; SWE = Sweden |
 | `taxon` | character | Taxon name as used in the dataset (may be subspecies, species, genus, or family) | — |
 | `reproduction` | numeric | Sexual reproductive effort index of the species at site at year of sampling | — |
+| `n_inds` | numeric | Number of individuals sampled (and pooled) for leaf traits | — |
+| `n_leaf` | numeric | Total (sum) of leaves sampled, pooled and processed for leaf traits | — |
 | `leaf_area` | numeric | One-sided leaf area | cm² |
 | `SLA` | numeric | Specific leaf area (leaf area per unit dry mass) | mm² mg⁻¹ |
 | `LDMC` | numeric | Leaf dry matter content (dry mass per unit fresh mass) | g g⁻¹ |
