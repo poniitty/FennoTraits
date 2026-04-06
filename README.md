@@ -73,7 +73,7 @@ Species-level lookup table with taxonomy and sampling summary statistics. Contai
 | `genus` | character | Genus | — |
 | `family` | character | Family | — |
 | `order` | character | Order | — |
-| `rank` | character | Taxonomic rank of the taxon entry | sub-species / species / genus / family |
+| `rank` | character | Taxonomic rank of the taxon entry | sub-species / species / genus / family / hybrid |
 | `n_areas` | numeric | Number of distinct study areas in which the taxon was recorded | — |
 | `n_locations` | numeric | Number of distinct plot locations at which the taxon was recorded | — |
 | `n_leaf_samples` | numeric | Number of individual leaf trait measurements available for the taxon | — |
