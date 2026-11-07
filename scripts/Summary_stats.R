@@ -48,7 +48,7 @@ all %>%
 
 # How many unique species per area
 all %>% 
-  filter(!rank %in% c("hybrid","genus","family")) %>% 
+  filter(!rank %in% c("hybrid","genus","family")) %>%
   select(area, taxon) %>% 
   distinct() %>% 
   group_by(area) %>% 
