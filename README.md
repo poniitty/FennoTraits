@@ -46,7 +46,7 @@ Niittynen, P. & Kemppinen, J. (2026). FennoTraits: dataset of plant functional t
 
 **Dataset**
 
-Niittynen, P. & Kemppinen, J. (2026). poniitty/FennoTraits: FennoTraits v2.0.0 (Version v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.22945414
+Niittynen, P. & Kemppinen, J. (2026). poniitty/FennoTraits: FennoTraits (Version v2.0.0). Zenodo. [https://doi.org/10.5281/zenodo.24033590](https://doi.org/10.5281/zenodo.24033590)
 
 <details>
 <summary>BibTeX</summary>
@@ -67,7 +67,7 @@ Niittynen, P. & Kemppinen, J. (2026). poniitty/FennoTraits: FennoTraits v2.0.0 (
   year      = {2026},
   publisher = {Zenodo},
   version   = {v2.0.0},
-  doi       = {10.5281/zenodo.22945414}
+  doi       = {10.5281/zenodo.24033590}
 }
 ```
 
