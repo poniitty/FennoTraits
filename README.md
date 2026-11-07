@@ -1,13 +1,18 @@
 # FennoTraits
 The up-to-date version of FennoTraits dataset.
 
+**Authors:** Pekka Niittynen [<img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" alt="ORCID iD">](https://orcid.org/0000-0002-7290-029X) & Julia Kemppinen [<img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" alt="ORCID iD">](https://orcid.org/0000-0001-7521-7229)
+
+
 We present here FennoTraits, a dataset of plant functional trait and community composition data collected from Fennoscandia across northern Finland, Norway, and Sweden in 2016–2026. The dataset has 44 600 abundance estimations and 166 348 site-level functional trait observations from 10 traits, representing 374 vascular plant species collected from 1283 study sites within seven study areas. The trait measurements consist of size-structural, leaf economic, leaf spectral, and reproductive traits. The species represent the majority of the native vascular plant species that occur in the seven study areas, and many of the species occur in all seven areas across two biomes and their ecotone: tundra and boreal forests. Each study area has distinct characteristics and a range of habitats: tundra, meadows, wetlands, shrublands, and boreal forests. The areas are under low anthropogenic influence, and many of the sites are within protected areas reserved for nature conservation and scientific research. With the dataset, we also provide a general description of the main trait patterns and profiles of the northern European flora.
 
 ![**FennoTraits graphical abstract: Sampling protocol and the different plot structures.**](plots/fig1%20v2.png)
 
+**Figure 1.** FennoTraits graphical abstract: Sampling protocol and the different plot structures.
+
 ---
 
-**Key statistics of the seven study areas. n trait obs = number of unique trait observations; n species = number of unique species in data; n sites = number of unique study sites with full plant community surveyed**
+**Table 1.** Key statistics of the seven study areas. n trait obs = number of unique trait observations; n species = number of unique species in data; n sites = number of unique study sites with full plant community surveyed
 
 | Area (acronym) | Lat, Lon | Size (km²) | Elevation (m a.s.l.) | Sampling years | n trait obs. | n abundance obs. | n species | n sites |
 |---|---|---:|---|---|---:|---:|---:|---:|
@@ -33,7 +38,7 @@ We present here FennoTraits, a dataset of plant functional trait and community c
 
 ## How to cite
 
-If you use FennoTraits, please cite both the data paper and the dataset version you used.
+If you use FennoTraits, please cite both the data paper and the dataset version you used. We encourage contact from users for guidance, advice, and collaboration. We appreciate users contacting us before visiting the study sites because of our long-term monitoring programs.
 
 **Data paper**
 
@@ -78,7 +83,7 @@ Here we describe the variables in the three data files accompanying the FennoTra
 
 ## 1. FennoTraits_community_heights.csv
 
-Community-level vegetation height and cover data. Contains 42,503 records across 15 variables.
+**Table 2.** Community-level vegetation height and cover data. Contains 45 057 rows across 15 variables.
 
 | Variable | Type | Description | Units / Values |
 |---|---|---|---|
@@ -102,7 +107,7 @@ Community-level vegetation height and cover data. Contains 42,503 records across
 
 ## 2. FennoTraits_leaf_traits.csv
 
-Individual leaf-level functional trait measurements. Contains 22,414 records across 18 variables.
+**Table 3.** Individual leaf-level functional trait measurements. Contains 24 248 rows across 18 variables.
 
 | Variable | Type | Description | Units / Values |
 |---|---|---|---|
@@ -131,7 +136,7 @@ Individual leaf-level functional trait measurements. Contains 22,414 records acr
 
 ## 3. FennoTraits_species.csv
 
-Species-level lookup table with taxonomy and sampling summary statistics. Contains 386 records across 10 variables.
+**Table 4.** Species-level lookup table with taxonomy and sampling summary statistics. Contains 400 rows across 10 variables.
 
 | Variable | Type | Description | Units / Values |
 |---|---|---|---|
