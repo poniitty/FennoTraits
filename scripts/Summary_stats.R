@@ -18,17 +18,17 @@ all <- bind_rows(comm %>%
 all %>% 
   filter(!rank %in% c("hybrid","genus","family")) %>% 
   select(taxon) %>% 
-  distinct() # 373 species
+  distinct() # 374 species
 
 # N of trait observations in whole data
 all %>% 
   filter(trait != "cvr") %>% 
-  nrow() # 155794 species
+  nrow() # 166348 trait observations
 
 # N of abundance observations in whole data
 all %>% 
   filter(trait == "cvr") %>% 
-  nrow() # 155794 species
+  nrow() # 44600 species abundancy observations
 
 # N of sites in whole data
 all %>% 
@@ -38,7 +38,7 @@ all %>%
   mutate(site = ifelse(design %in% c("KIL_WOO", "KIL_MI"), parse_number(site), site)) %>% 
   select(-design) %>% 
   distinct() %>% 
-  count()
+  count() # 1283 sites
 
 # How many trait observations per area
 all %>% 

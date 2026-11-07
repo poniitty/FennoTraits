@@ -277,4 +277,55 @@ ggplot(taxon_counts, aes(x = reorder(taxon, count), y = count, fill = functype))
         legend.position = "bottom")
 ggsave("plots/Species_obs_counts.pdf", width = 1961*0.6, height = 1961, units = "px")
 
+########################################################
+# Fennoscandia map
+
+library(tidyverse)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+p <- read_csv("data/FennoTraits_leaf_traits.csv") %>% 
+  group_by(area) %>% 
+  summarise(Lat = median(Lat, na.rm = TRUE),
+            Lon = median(Lon, na.rm = TRUE)) %>% 
+  st_as_sf(coords = c("Lon","Lat"), crs = 4326)
+
+countries <- ne_countries(country = c("Finland", "Sweden", "Norway", "Russia"), scale = "medium", returnclass = "sf")
+
+# Reproject the country borders and points to EPSG:3413
+countries_polar <- st_transform(countries, crs = 3413)
+p_polar <- st_transform(p, crs = 3413)
+
+ggplot() +
+  geom_sf(data = countries, fill = "lightgray", color = "black") +
+  geom_sf(data = p, aes(color = "red"), size = 3) +
+  coord_sf(xlim = c(10, 32), ylim = c(60, 72)) + # Adjust to focus on northern Scandinavia
+  coord_sf(crs = st_crs(3413)) +
+  labs(title = "Study Areas in Northern Scandinavia") +
+  theme_minimal()
+
+ggplot() +
+  geom_sf(data = countries_polar, fill = "lightgray", color = "black") +
+  geom_sf(data = p_polar, aes(color = "red"), size = 3) +
+  coord_sf(crs = st_crs(3413)) +
+  labs(title = "Study Areas in Northern Scandinavia (Polar Stereographic Projection)") +
+  theme_minimal()
+
+# Define a custom azimuthal equidistant projection centered at 20°E, 90°N
+custom_crs <- "+proj=aeqd +lat_0=90 +lon_0=20 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
+
+# Reproject the data
+countries_custom <- st_transform(countries, crs = custom_crs)
+p_custom <- st_transform(p, crs = custom_crs)
+
+# Plot
+ggplot() +
+  geom_sf(data = countries_custom, fill = "lightgray", color = "black") +
+  geom_sf(data = p_custom, aes(color = "red"), size = 1) +
+  coord_sf(crs = st_crs(custom_crs)) +
+  coord_sf(xlim = c(-374625.5, 566868.4), ylim = c(-2994763, -2071515)) +
+  theme_minimal() +
+  theme(legend.position = "none")
+ggsave("plots/Fenno_map.pdf", width = 800, height = 800, units = "px")
 
