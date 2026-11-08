@@ -23,12 +23,12 @@ all %>%
 # N of trait observations in whole data
 all %>% 
   filter(trait != "cvr") %>% 
-  nrow() # 166348 trait observations
+  nrow() # 166473 trait observations
 
 # N of abundance observations in whole data
 all %>% 
   filter(trait == "cvr") %>% 
-  nrow() # 44600 species abundancy observations
+  nrow() # 44844 species abundancy observations
 
 # N of sites in whole data
 all %>% 
@@ -43,6 +43,11 @@ all %>%
 # How many trait observations per area
 all %>% 
   filter(trait != "cvr") %>% 
+  group_by(area) %>% 
+  count()
+
+all %>% 
+  filter(trait == "cvr") %>% 
   group_by(area) %>% 
   count()
 
